@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('main_office_name');
             $table->string('nat_branch_office');
             $table->string('inter_branch_office');
-            $table->decimal("latitude",20);
-            $table->decimal("longitude",20);
+            $table->float("latitude",8, 20);
+            $table->float("longitude",8, 20);
             $table->timestamps();
         });
     }
