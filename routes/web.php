@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\CarouselsController;
-use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CarouselsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,5 @@ Route::get('/api/news/{id}', [NewsController::class,'show'])->name('getNewsDetai
 
 
 Route::get('/api/carousels', [CarouselsController::class,'index'])->name('getCarousels');
+Route::get('api/contacts', [ContactController::class, 'index']);
 
