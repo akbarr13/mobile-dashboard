@@ -38,6 +38,8 @@ class NewsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
+    protected static ?string $navigationGroup = 'Content Management';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -166,5 +168,5 @@ class NewsResource extends Resource
             'edit' => Pages\EditNews::route('/{record}/edit'),
         ];
     }
-    
+
 }
