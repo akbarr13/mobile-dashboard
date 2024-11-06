@@ -65,18 +65,5 @@ class AdminPanelProvider extends PanelProvider
             ]);
     }
 
-    public function boot()
-    {
-        Filament::serving(function () {
-            Filament::navigation([
 
-                NavigationGroup::make('Content Management')
-                    ->items([
-                        NewsResource::getNavigationItems(),
-                        ContactResource::getNavigationItems(),
-                        CarouselResource::getNavigationItems(),
-                    ]),
-            ]);
-        });
-    }
 }

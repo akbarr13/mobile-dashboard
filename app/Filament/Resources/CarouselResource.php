@@ -17,6 +17,8 @@ class CarouselResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-photo';
 
+    protected static ?string $navigationGroup = 'Content Management';
+
 
 
     // Menampilkan form di halaman index untuk satu record pertama
