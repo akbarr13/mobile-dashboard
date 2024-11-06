@@ -72,9 +72,9 @@ class AdminPanelProvider extends PanelProvider
 
                 NavigationGroup::make('Content Management')
                     ->items([
-                        NewsResource::getNavigationItem(),
-                        ContactResource::getNavigationItem(),
-                        CarouselResource::getNavigationItem(),
+                        NewsResource::getNavigationItems(),
+                        ContactResource::getNavigationItems(),
+                        CarouselResource::getNavigationItems(),
                     ]),
             ]);
         });
