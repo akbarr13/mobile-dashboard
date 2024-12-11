@@ -33,7 +33,7 @@ class CarouselResource extends Resource
                 Forms\Components\FileUpload::make('image_name')
                     ->image()
                     ->required()
-                    ->maxLength(255),
+                    ->maxSize(2048),
                 Forms\Components\Textarea::make('description')
                     ->required(),
             ]);
