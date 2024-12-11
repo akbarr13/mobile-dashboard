@@ -43,7 +43,11 @@ class CarouselResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('name')->sortable(),
-                Tables\Columns\TextColumn::make('image_name')->sortable(),
+                Tables\Columns\ImageColumn::make('image_url') // This will display the image
+                ->label('Image') // Specify the disk if necessary
+                ->height(100) // Set the height of the image
+                ->width(100) // Set the width of the image
+                ->square(), // Optional: make the image square
                 Tables\Columns\TextColumn::make('description')->limit(50),
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime(),
