@@ -28,19 +28,19 @@ class DatabaseSeeder extends Seeder
 
         Carousel::create([
             'name' => 'First Carousel',
-            'image_url' => 'car1.jpg',
+            'image_name' => 'car1.jpg',
             'description' => 'Description for the first carousel image.',
         ]);
 
         Carousel::create([
             'name' => 'Second Carousel',
-            'image_url' => 'building2.jpg',
+            'image_name' => 'building2.jpg',
             'description' => 'Description for the second carousel image.',
         ]);
 
         Carousel::create([
             'name' => 'Third Carousel',
-            'image_url' => 'building3.jpg',
+            'image_name' => 'building3.jpg',
             'description' => 'Description for the third carousel image.',
         ]);
 
