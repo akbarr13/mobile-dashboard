@@ -103,8 +103,8 @@ class CarouselResource extends Resource
                 Tables\Actions\DeleteBulkAction::make()
                     ->label('Delete Selected'), // Add a label for clarity
             ])
-            ->defaultSort('created_at', 'desc') // Default sorting by created_at in descending order
-            ->pagination(10); // Set pagination to 10 items per page
+            ->defaultSort('created_at', 'desc'); // Default sorting by created_at in descending order
+
     }
 
 
