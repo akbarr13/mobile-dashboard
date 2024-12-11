@@ -26,31 +26,31 @@ class CarouselResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-        ->schema([
-            Forms\Components\Grid::make()
-                ->columns(3) // Specify the number of columns
-                ->schema([
-                    Forms\Components\TextInput::make('name')
-                        ->required()
-                        ->maxLength(255)
-                        ->label('Carousel Name') // Add a label for clarity
-                        ->placeholder('Enter carousel name'), // Add a placeholder for user guidance
+            ->schema([
+                Forms\Components\Grid::make()
+                    ->columns(3) // Specify the number of columns
+                    ->schema([
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->maxLength(255)
+                            ->label('Carousel Name') // Add a label for clarity
+                            ->placeholder('Enter carousel name'), // Add a placeholder for user guidance
 
-                    Forms\Components\FileUpload::make('image_name') // Updated to 'image_name'
-                        ->image()
-                        ->required()
-                        ->maxSize(2048) // Limit file size to 2MB
-                        ->label('Carousel Image') // Add a label for clarity
-                        ->placeholder('Upload an image'), // Add a placeholder for user guidance
+                        Forms\Components\FileUpload::make('image_name') // Updated to 'image_name'
+                            ->image()
+                            ->required()
+                            ->maxSize(2048) // Limit file size to 2MB
+                            ->label('Carousel Image') // Add a label for clarity
+                            ->placeholder('Upload an image'), // Add a placeholder for user guidance
 
-                    Forms\Components\Textarea::make('description')
-                        ->required()
-                        ->label('Description') // Add a label for clarity
-                        ->placeholder('Enter a description for the carousel') // Add a placeholder for user guidance
-                        ->maxLength(500) // Optional: Limit the description length
-                        ->rows(3), // Set the number of visible rows for the textarea
-                ]),
-        ]);
+                        Forms\Components\Textarea::make('description')
+                            ->required()
+                            ->label('Description') // Add a label for clarity
+                            ->placeholder('Enter a description for the carousel') // Add a placeholder for user guidance
+                            ->maxLength(500) // Optional: Limit the description length
+                            ->rows(3), // Set the number of visible rows for the textarea
+                    ]),
+            ]);
     }
     public static function table(Table $table): Table
     {
@@ -72,8 +72,8 @@ class CarouselResource extends Resource
                     ->disk('public') // Specify the disk if necessary
                     ->height(100) // Set the height of the image
                     ->width(100) // Set the width of the image
-                    ->square() // Optional: make the image square
-                    ->alt('Carousel Image'), // Add alt text for accessibility
+                    ->square(), // Optional: make the image square
+
 
                 Tables\Columns\TextColumn::make('description')
                     ->label('Description') // Add a label for clarity
