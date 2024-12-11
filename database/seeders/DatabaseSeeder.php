@@ -27,9 +27,21 @@ class DatabaseSeeder extends Seeder
 
 
         Carousel::create([
-            'first' => 'car1.jpg',
-            'second' => 'building2.jpg',
-            'third' => 'building3.jpg'
+            'name' => 'First Carousel',
+            'image_url' => 'car1.jpg',
+            'description' => 'Description for the first carousel image.',
+        ]);
+
+        Carousel::create([
+            'name' => 'Second Carousel',
+            'image_url' => 'building2.jpg',
+            'description' => 'Description for the second carousel image.',
+        ]);
+
+        Carousel::create([
+            'name' => 'Third Carousel',
+            'image_url' => 'building3.jpg',
+            'description' => 'Description for the third carousel image.',
         ]);
 
         Contact::create([
@@ -44,7 +56,5 @@ class DatabaseSeeder extends Seeder
                 'lng' => 107.6640
             ]
         ]);
-
-
     }
 }

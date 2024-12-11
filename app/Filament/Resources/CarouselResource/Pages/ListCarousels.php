@@ -20,7 +20,7 @@ class ListCarousels extends ListRecords
     public function mount(): void
     {
         // Redirect langsung ke halaman edit ID 1
-        redirect()->to('admin/carousels/1/edit');
+       
     }
 
     public function render(): \Illuminate\Contracts\View\View
