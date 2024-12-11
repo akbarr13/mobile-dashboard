@@ -26,16 +26,17 @@ class CarouselResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-        ->schema([
-            Forms\Components\TextInput::make('name')
-                ->required()
-                ->maxLength(255),
-            Forms\Components\TextInput::make('image_name')
-                ->required()
-                ->maxLength(255),
-            Forms\Components\Textarea::make('description')
-                ->required(),
-        ]);
+            ->schema([
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\FileUpload::make('image_name')
+                    ->image()
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\Textarea::make('description')
+                    ->required(),
+            ]);
     }
     public static function table(Table $table): Table
     {
@@ -43,12 +44,12 @@ class CarouselResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('name')->sortable(),
-                Tables\Columns\ImageColumn::make('image_url') // This will display the image
-                ->label('Image')
-                ->disk('public') // Specify the disk if necessary
-                ->height(100) // Set the height of the image
-                ->width(100) // Set the width of the image
-                ->square(), // Optional: make the image square
+                Tables\Columns\ImageColumn::make('image_name') // This will display the image
+                    ->label('Image')
+                    ->disk('public') // Specify the disk if necessary
+                    ->height(100) // Set the height of the image
+                    ->width(100) // Set the width of the image
+                    ->square(), // Optional: make the image square
                 Tables\Columns\TextColumn::make('description')->limit(50),
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime(),
