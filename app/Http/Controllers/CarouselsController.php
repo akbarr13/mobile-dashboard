@@ -9,7 +9,7 @@ class CarouselsController extends Controller
 {
 
     public function index(){
-        $carousels = Carousel::firstOrFail();
+        $carousels = Carousel::all();
 
         return response()->json($carousels, 200);
     }

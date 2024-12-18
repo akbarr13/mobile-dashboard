@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\AboutUs;
 use App\Models\Carousel;
 use App\Models\Contact;
 use App\Models\User;
@@ -55,6 +56,10 @@ class DatabaseSeeder extends Seeder
                 'lat' => 6.9432,
                 'lng' => 107.6640
             ]
+        ]);
+
+        AboutUs::create([
+            'content' => 'a',
         ]);
     }
 }
